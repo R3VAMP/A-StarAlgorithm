@@ -1,7 +1,0 @@
-print("Hello There")
-print("Hello There")
-print("Hello There")
-print("Hello There")
-print("Hello There")
-print("Hello There")
-print("Hello There")
