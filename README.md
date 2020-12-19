@@ -1,6 +1,9 @@
 # A-StarAlgorithm
 - This is a GUI version of the A Star path finding algorithm
-- I have also created an executable file to directly run the main.py without going to terminal or any IDE. For this to work, you need to have the required modules already installed
+
+## Note :
+
+If you just want to try out the visualizer, just double click on the main.exe File. You don't need to have python installed on your system
 
 ## Requirements
 - Python 3
