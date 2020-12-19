@@ -3,7 +3,8 @@
 
 ## Note :
 
-If you just want to try out the visualizer, just double click on the main.exe File. You don't need to have python installed on your system
+If you just want to try out the visualizer, just double click on the main.exe File.
+- It works even if you don't have python installed on your system.
 
 ## Requirements
 - Python 3
