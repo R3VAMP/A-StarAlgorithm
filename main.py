@@ -91,7 +91,7 @@ def heuristic(p1, p2):
 	x2, y2 = p2
 	return abs(x1 - x2) + abs(y1 - y2)
 
-
+# Reference ( Functions - reconstruct_path , algorithm) : https://en.wikipedia.org/wiki/A*_search_algorithm
 def reconstruct_path(came_from, current, draw):
 	while current in came_from:
 		current = came_from[current]
