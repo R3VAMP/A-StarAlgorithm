@@ -6,4 +6,5 @@
 - Python 3
 - Pygame
 
-## 
+## How to install pygame
+- pip install pygame 
