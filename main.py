@@ -5,6 +5,8 @@ from queue import PriorityQueue
 WIDTH = 600
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
 pygame.display.set_caption("A* Visualiser")
+programIcon = pygame.image.load('route.png')
+pygame.display.set_icon(programIcon)
 
 search_color = (153, 255, 102)          #LIME
 search_check_color = (42, 128, 0)       #GREEN
