@@ -7,4 +7,6 @@
 - Pygame
 
 ## How to install pygame
-- pip install pygame 
+- Open up terminal and type the following command   
+  - pip install pygame 
+- If you get any errors while executing the command, check whether *pip* is already installed or not.
