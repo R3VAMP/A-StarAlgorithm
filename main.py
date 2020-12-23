@@ -8,14 +8,14 @@ pygame.display.set_caption("A* Visualiser")
 programIcon = pygame.image.load('route.png')
 pygame.display.set_icon(programIcon)
 
-search_color = (153, 255, 102)          #LIME
-search_check_color = (42, 128, 0)       #GREEN
-background_color = (255, 255, 255)      #WHITE
-obstacle_color = (0, 0, 0)              #BLACK
-path_color = (204, 0, 153)              #PINK
-start_node_color = (255, 0 ,0)          #RED
-grid_color = (128, 128, 128)            #GREY
-end_node_color = (0, 255, 255)          #AQUA
+SEARCH_COLOR = (153, 255, 102)          #LIME
+SEARCH_CHECK_COLOR = (42, 128, 0)       #GREEN
+BACKGROUND_COLOR = (255, 255, 255)      #WHITE
+OBSTACLE_COLOR = (0, 0, 0)              #BLACK
+PATH_COLOR = (204, 0, 153)              #PINK
+START_NODE_COLOR = (255, 0 ,0)          #RED
+GRID_COLOR = (128, 128, 128)            #GREY
+END_NODE_COLOR = (0, 255, 255)          #AQUA
 
 class Node:
 	def __init__(self, row, col, width, total_rows):
@@ -23,7 +23,7 @@ class Node:
 		self.col = col
 		self.x = row * width
 		self.y = col * width
-		self.color = background_color
+		self.color = BACKGROUND_COLOR
 		self.neighbors = []
 		self.width = width
 		self.total_rows = total_rows
@@ -32,40 +32,40 @@ class Node:
 		return self.row, self.col
 
 	def check_closed(self):
-		return self.color == search_color
+		return self.color == SEARCH_COLOR
 
 	def check_open(self):
-		return self.color == search_check_color
+		return self.color == SEARCH_CHECK_COLOR
 
 	def check_obstacle(self):
-		return self.color == obstacle_color
+		return self.color == OBSTACLE_COLOR
 
 	def check_start(self):
-		return self.color == start_node_color
+		return self.color == START_NODE_COLOR
 
 	def check_end(self):
-		return self.color == end_node_color
+		return self.color == END_NODE_COLOR
 
 	def reset(self):
-		self.color = background_color
+		self.color = BACKGROUND_COLOR
 
 	def create_start(self):
-		self.color = start_node_color
+		self.color = START_NODE_COLOR
 
 	def create_closed(self):
-		self.color = search_color
+		self.color = SEARCH_COLOR
 
 	def create_open(self):
-		self.color = search_check_color
+		self.color = SEARCH_CHECK_COLOR
 
 	def create_obstacle(self):
-		self.color = obstacle_color
+		self.color = OBSTACLE_COLOR
 
 	def create_end(self):
-		self.color = end_node_color
+		self.color = END_NODE_COLOR
 
 	def create_path(self):
-		self.color = path_color
+		self.color = PATH_COLOR
 
 	def draw(self, win):
 		pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.width))
@@ -162,13 +162,13 @@ def make_grid(rows, width):
 def draw_grid(win, rows, width):
 	gap = width // rows
 	for i in range(rows):
-		pygame.draw.line(win, grid_color, (0, i * gap), (width, i * gap))
+		pygame.draw.line(win, GRID_COLOR, (0, i * gap), (width, i * gap))
 		for j in range(rows):
-			pygame.draw.line(win, grid_color, (j * gap, 0), (j * gap, width))
+			pygame.draw.line(win, GRID_COLOR, (j * gap, 0), (j * gap, width))
 
 
 def draw(win, grid, rows, width):
-	win.fill(background_color)
+	win.fill(BACKGROUND_COLOR)
 
 	for row in grid:
 		for node in row:
